@@ -4,6 +4,7 @@ import {
   getContactById,
   removeContact,
   addContact,
+  updateContact,
 } from "./contacts.js";
 program
   .option("-a, --action <type>", "choose action")
@@ -16,7 +17,7 @@ program.parse();
 
 const options = program.opts();
 
-async function invokeAction({ action, id, name, email, phone }) {
+async function invokeAction({ action, id, ...data }) {
   try {
     switch (action) {
       case "list": {
@@ -36,7 +37,7 @@ async function invokeAction({ action, id, name, email, phone }) {
         break;
       }
       case "add": {
-        const contact = await addContact(name, email, phone);
+        const contact = await addContact(data);
         console.log("Contact added:");
         console.log(contact);
         break;
@@ -45,6 +46,16 @@ async function invokeAction({ action, id, name, email, phone }) {
         const contact = await removeContact(id);
         if (contact) {
           console.log("Contact removed:");
+          console.log(contact);
+        } else {
+          console.warn(`Contact with id ${id} not found.`);
+        }
+        break;
+      }
+      case "update": {
+        const contact = await updateContact(id, data);
+        if (contact) {
+          console.log("Contact updated:");
           console.log(contact);
         } else {
           console.warn(`Contact with id ${id} not found.`);

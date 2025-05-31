@@ -50,3 +50,11 @@ Removes a contact by ID and displays the removed contact object, or `null` if no
 ```
 node src/index.js -a remove -i qdggE76Jtbfd9eWJHrssH
 ```
+
+### Update a new contact
+
+Updates a contact and displays the updated contact object:
+
+```
+node src/index.js -a update -i e6ywwRe4jcqxXfCZOj_1e -n Kiwi -e kiwi@gmail.com -p 322-22-22
+```
