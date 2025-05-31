@@ -24,7 +24,7 @@ npm install
 Displays the entire contacts list as a table:
 
 ```
-node src/index.js -a list
+node index.js -a list
 ```
 
 ### Get contact by ID
@@ -32,7 +32,7 @@ node src/index.js -a list
 Displays the contact object by the specified ID, or `null` if not found:
 
 ```
-node src/index.js -a get -i 05olLMgyVQdWRwgKfg5J6
+node index.js -a get -i 05olLMgyVQdWRwgKfg5J6
 ```
 
 ### Add a new contact
@@ -40,7 +40,7 @@ node src/index.js -a get -i 05olLMgyVQdWRwgKfg5J6
 Adds a contact and displays the newly created contact object:
 
 ```
-node src/index.js -a add -n Mango -e mango@gmail.com -p 322-22-22
+node index.js -a add -n Mango -e mango@gmail.com -p 322-22-22
 ```
 
 ### Remove a contact
@@ -48,7 +48,7 @@ node src/index.js -a add -n Mango -e mango@gmail.com -p 322-22-22
 Removes a contact by ID and displays the removed contact object, or `null` if not found:
 
 ```
-node src/index.js -a remove -i qdggE76Jtbfd9eWJHrssH
+node index.js -a remove -i AeHIrLTr6JkxGE6SN-0Rw
 ```
 
 ### Update a new contact
@@ -56,5 +56,5 @@ node src/index.js -a remove -i qdggE76Jtbfd9eWJHrssH
 Updates a contact and displays the updated contact object:
 
 ```
-node src/index.js -a update -i e6ywwRe4jcqxXfCZOj_1e -n Kiwi -e kiwi@gmail.com -p 322-22-22
+node index.js -a update -i e6ywwRe4jcqxXfCZOj_1e -n Kiwi -e kiwi@gmail.com -p 322-22-22
 ```
